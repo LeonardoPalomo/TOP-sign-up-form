@@ -5,44 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign up form</title>
   <link rel="stylesheet" href="./style.css">
-  <script src="./password-validator.js"></script>
 </head>
 <body>
   <div class="container">
-    <div class="showcase">Background-image</div>
+    <div class="showcase">
+      <div class="logo">
+        <p>The kiln</p>
+      </div>
+    </div>
     <div class="sign-up-form">
       <div class="introduction">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ipsam sequi ipsa consequuntur odio provident. Aspernatur atque perspiciatis veniam odit. Iusto nobis officia animi inventore, placeat ut molestias praesentium esse!</p>
       </div>
       <div class="form">
-        <h2>Let's do this!</h2>
-        <form action="/" method="post">
+        <h2>Beware of going hollow</h2>
+        <form id="signup" method="post">
           <p>
-            <label for="first_name">First name:</label>
-            <input type="text" id="first_name">
+            <label for="first_name">First name*:</label>
+            <input type="text" id="first_name" name="first_name" required>
+            <span></span>
           </p>
 
           <p>
-            <label for="first_name">First name:</label>
-            <input type="text" id="first_name">
+            <label for="last_name">Last name*:</label>
+            <input type="text" id="last_name" name="last_name" required>
+            <span></span>
           </p>
 
           <p>
-            <label for="first_name">First name:</label>
-            <input type="text" id="first_name">
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail">
+            <span></span>
           </p>
 
           <p>
-            <label for="first_name">First name:</label>
-            <input type="text" id="first_name">
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]+">
+            <span></span>
+          </p>
+
+          <p>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span id="valid-pass" class="valid-pass"></span>
+          </p>
+
+          <p>
+            <label for="confirm">Confirm password:</label>
+            <input type="password" id="confirm" name="confirm_password">
+            <span></span>
           </p>
 
         </form>
       </div>
       <div class="submit">
-        <button type="submit">Create Account </button>
+        <button type="submit" form="signup" >Create Account </button>
       </div>
     </div>
   </div>
 </body>
+<script src="./password-validator.js"></script>
 </html>
